@@ -1,4 +1,4 @@
-### Theory 
+#Theory 
 **● What is Emmet?**
   Emmet is a plugin for text editors. We can code in highspeed using abbreviations and short expressions. It will expand to a full code.
 
