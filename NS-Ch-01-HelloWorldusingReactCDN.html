@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script>
+            // const heading = React.createElement("h1",{},"Hello World!");
+            //all the tag's attribute come inside the object parameter in createElement.
+            const heading = React.createElement("h1",{id:"title"},"Hello World!");
+            //root is the place where react runs
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            //whatever we pass inside our render function, it will get injected inside our root.
+            root.render(heading); //passing react element inside the root.
+            // Render takes the react element and modifies the dom.
+            //React will override what is there in the root.
+            console.log(heading); //O/P Object
+        </script>
+    </body>
+</html>
