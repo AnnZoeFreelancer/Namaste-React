@@ -1,10 +1,29 @@
 #container{
     background-color:#a5b78f;
     color:rgb(160, 134, 134);
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding:30px;
+    margin:5px;
 }
 .title{
     color:whitesmoke;
 }
 .topic{
     color:#556028;
+}
+.logo{
+    text-align:start;
+}
+.searchBar{
+    text-align:center;
+    border-radius:5px;
+    padding:3px;
+    border:1px solid gray;
+}
+.userIcon{
+    text-align:end;
 }
