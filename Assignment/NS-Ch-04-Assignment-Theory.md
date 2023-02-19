@@ -103,4 +103,4 @@ What is config driven UI?
 When we build  a real life app for different locations, we control our website with config.
 This config is driven by backend api
 Backend controls what type of website should look in kolkata, bangalore.
-If a location doesn't have offers, backend wont return any offer for that location. 
+If a location doesn't have offers,  backend wont return any offer for that location. 
