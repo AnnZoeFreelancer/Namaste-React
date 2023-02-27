@@ -32,3 +32,6 @@
     padding: 0;
     box-sizing:inherit;
 }
+.card h3{
+    overflow-wrap: anywhere;
+}
