@@ -42,7 +42,7 @@ const Body=()=>{
     console.log("render");
     //early return(not render component)
     if(!allRestaurants) return null;
-    if(filteredRestaurants?.length===0) return <h1>No Restaurant match your filter</h1>
+    // if(filteredRestaurants?.length===0) return <h1>No Restaurant match your filter</h1>
     return allRestaurants.length===0?(<Shimmer/>):
     (
        <>

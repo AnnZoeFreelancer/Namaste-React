@@ -1,23 +1,40 @@
 .header{
     display:flex;
     justify-content:space-between;
-    margin:10px;
-    border:1px solid black;
+    box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #fff;
+    padding: 0 20px;
+    align-items: center;
+    color:#3d4152;
 }
 .nav-items>ul{
     list-style-type:none;
     display:flex;
+    align-items: center;
 }
 .nav-items>ul>li{
-    padding:10px;
+    margin-right: 60px;
+    color: #3d4152;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    padding-left: 28px;
+
 }
 .logo{
-    width:100px;
+    height:100%;
 }
 .card{
-    width:200px;
-    border:1px solid black;
-    margin-bottom:50px;
+    width:259px;
+    height:160px;
+    margin-bottom:80px;
+    padding: 20px;
+    border:1px solid #e9e9eb;
 }
 .card>img{
     width:100%;
@@ -25,13 +42,65 @@
 .restaurant-list{
     display:flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 40px;
+    border-top: 1px solid #e9e9eb;
+    margin:10px 20px;
 }
 *, :after, :before {
     margin: 0;
     padding: 0;
     box-sizing:inherit;
 }
-.card h3{
+.search-container{
+    display:inline-block;
+    text-align: center;
+    margin:0 auto;
+    width:100%;
+}
+.search-btn{
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    width: 118px;
+    margin-left: 10px;
+    border:1px solid rgb(219, 219, 219);
+}
+.search-input{
+    width: 800px;
+    margin-top: 130px;
+    border: 1px solid rgba(40,44,63,.3);
+    border-radius: 3px;
+    height:50px;
+    padding:0 20px;
+}
+
+.restaurant-card-name{
+    margin-top:14px;
+    font-size:17px;
+    font-weight:bold;
+}
+.restaurant-card-cuisines{
+    margin-top:4px;
     overflow-wrap: anywhere;
+    font-size:13px;
+}
+.restaurant-card-last-mile-travel-string{
+    font-size:15px;
+    font-weight: 400;
+    display:inline-block;
+    text-align: center;
+}
+.shimmer-container{
+    margin-top:190px;
+}
+.shimmer-card{
+    width:259px;
+    height:160px;
+    background-color: lightgray;
+    margin:20px;
+}
+.login-btn, .logout-btn{
+    border:none;
+    background-color:none;
 }
