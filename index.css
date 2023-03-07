@@ -1,3 +1,6 @@
+.header-container{
+    padding-top:80px;
+}
 .header{
     display:flex;
     justify-content:space-between;
@@ -68,7 +71,7 @@
 }
 .search-input{
     width: 800px;
-    margin-top: 130px;
+    margin-top: 20px;
     border: 1px solid rgba(40,44,63,.3);
     border-radius: 3px;
     height:50px;
@@ -113,5 +116,17 @@ a:hover{
 }
 .menu{
     display:flex;
-    margin-top:80px;
+    justify-content:space-evenly;
+    max-width: 1000px;
+    margin:20px auto 0;
+}
+.menu h2{
+    margin:10px 0;
+}
+.menu img{
+    width:259px;
+    height:160px;
+}
+.menu div{
+    word-spacing: wrap;
 }

@@ -15,7 +15,8 @@ const RestaurantMenu = () =>{
         getRestaurantInfo();
     },[]);
     async function getRestaurantInfo(){
-        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.931948400167405&lng=80.1345556229353&restaurantId=21471&submitAction=ENTER");
+        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.931948400167405&lng=80.1345556229353&restaurantId="+resId+"&submitAction=ENTER");
+        //check with id in url 126915, 21471
         const json =await data.json();
         console.log(json);
         setRestaurant(json?.data?.cards[0]?.card?.card?.info); 
@@ -27,13 +28,13 @@ const RestaurantMenu = () =>{
     return (!restaurant)? <Shimmer/>: (
        <div className="menu">
        <div>
-            <h1>Restaurant id:{resId}</h1>
+            <div>Restaurant id:{resId}</div>
             <h2>{restaurant.name}</h2>
             <img src={IMG_CDN_URL +  restaurant.cloudinaryImageId}></img>
-            <h3>{restaurant.area}</h3>
-            <h3>{restaurant.city}</h3>
-            <h3>{restaurant.costForTwoMessage}</h3>
-            <h3>{restaurant.avgRating}</h3>
+            <div>{restaurant.area}</div>
+            <div>{restaurant.city}</div>
+            <div>{restaurant.costForTwoMessage}</div>
+            <div>{restaurant.avgRating}</div>
         </div>
         <div>
             <h1>Menu</h1>

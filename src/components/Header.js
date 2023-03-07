@@ -16,7 +16,8 @@ const Header = () =>{
     const [title,setTitle] = useState("Foodies Pit Stop");
     const [isLoggedIn,setIsLoggedIn] =useState(false);
     return (
-        <div className="header">
+        <div className="header-container">
+            <div className="header">
             <Title/>
             <h1>{title}</h1>
             {/* <button onClick={()=>setTitle("New Food App")}>Change Title</button>   */}
@@ -37,6 +38,7 @@ const Header = () =>{
             
             
 
+        </div>
         </div>
     )
 }
