@@ -1,6 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import logo from "../assets/img/logo.png";
+import {Link} from "react-router-dom";
 
 const loggedInUser=()=>{
     //API call to check authentication
@@ -21,9 +22,9 @@ const Header = () =>{
             {/* <button onClick={()=>setTitle("New Food App")}>Change Title</button>   */}
             <div className="nav-items">
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT</li>
-                    <li>CONTACT</li>
+                    <li><Link to = "/">HOME</Link></li>
+                    <li><Link to = "/about">ABOUT</Link></li>
+                    <li><Link to = "/contact">CONTACT</Link></li>
                     <li>CART</li>
                 </ul>
             </div>
