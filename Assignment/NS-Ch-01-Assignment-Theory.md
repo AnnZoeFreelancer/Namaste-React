@@ -26,32 +26,43 @@ Using CDN allows for the quick transfer of assets needed to properly load your i
 ## What is difference between react.development.js and react.production.js files via CDN?
   Development mode includes useful warnings and gives you access to tools that make development and debugging easier. Production mode minifies your code and better represents the performance your app will have on end users' devices.
 
-`<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script> 
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>`
+```javascript
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script> 
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+```
 
-    - We are using unpkg CDN. unpkg is an open source, global content delivery network supporting npm packages.
-    - @17represent the version of the React library
-    - This is the development version of the React library with debugging option. To deploy the application in the production environment, use below scripts.
+
+  - We are using unpkg CDN. unpkg is an open source, global content delivery network supporting npm packages
+  @17represent the version of the React library
+  - This is the development version of the React library with debugging option. To deploy the application in the production environment, use below scripts.
 
 ## What is async and defer?
  Async and defer are boolean attributes which are used along with script tags to load our external scripts efficiently into our webpage. 
- **In Normal** :
-      1. HTML parsing goes on 
-      2. Encounters Scripts 
-      3. Scripts are fetched on the network
-      4. HTML parsing then continues
-**In Async** : 
-      1. HTML parsing goes on
-      2. Encounters Scripts 
-      3. Scrips are fetched in async manner parallelly
-      4. As soon as scripts are available, script is executed
-      5. HTML parsing continues
-**In Defer** : 
+ **In Normal**
+
+    
+
+          1. HTML parsing goes on 
+          2. Encounters Scripts 
+          3. Scripts are fetched on the network
+          4. HTML parsing then continues
+**In Async** 
+
+
+          1. HTML parsing goes on
+          2. Encounters Scripts 
+          3. Scrips are fetched in async manner parallelly
+          4. As soon as scripts are available, script is executed
+          5. HTML parsing continues
+**In Defer** 
+
+    ```javascript
       1. HTML parsing goes on
       2. Encounters Scripts
       3. Scripts are fetched parallelly (Still HTML parsing goes on)
       4. HTML parsing gets completed
       5. Scripts get executed.
+```
  
  ## When to use differ and when to use async?
   - Async attributes does not guarantee the order of execution of the scripts. But defer does.
