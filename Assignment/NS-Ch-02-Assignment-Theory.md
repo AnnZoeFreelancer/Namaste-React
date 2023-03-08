@@ -1,4 +1,4 @@
-**NR-CH-02-THEORY-ASSIGNMENT**
+**NR-CH-01-THEORY-ASSIGNMENT**
 
 ##  What is `NPM`?
 NPM doesn't stand for Node Package Manager but we use it to manage our packages. It's our largest software registry with lots of packages where we can share and borrow packages from all over the world. We can manage private development. It consists of three components
@@ -36,26 +36,26 @@ NPM doesn't stand for Node Package Manager but we use it to manage our packages.
 
 ## List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
   **  Superpowers of Parcel are as follow:**
--       Hot Module Replacement(File Watcher Algorithm),
--       Zero Config, 
--       Bundling, 
--       Minifying, 
--       Cleaning our code, 
--       Caching
--       Image Optimization, 
--       Compression
--       Superfast build algorithm, 
--       Consistent Hashing algorithm
--       Dev and production build, 
--       HTTPS on dev, 
--       Manages port number,
--       Creates a server
+       1. Hot Module Replacement(File Watcher Algorithm),
+       2. Zero Config, 
+       3. Bundling, 
+       4. Minifying, 
+       5. Cleaning our code, 
+       6. Caching
+       7. Image Optimization, 
+       8. Compression
+       9. Superfast build algorithm, 
+       10. Consistent Hashing algorithm
+       11. Dev and production build, 
+       12. HTTPS on dev, 
+       13. Manages port number,
+       14. Creates a server
 
-     **Dev Server** : Parcel has a built in server which gets automatically 	started when we run parcel command. "parcel server". It starts server by default at port number 1234.
+    1. **Dev Server** : Parcel has a built in server which gets automatically started when we run parcel command. `parcel server` It starts server by default at port number 1234.
 
-      **Caching**: Parcel needs space for running, and it creates caches. Parcel caches everythind it builds to the disk. If we restart the server, Parcel will only rebuild the ones that have changes from the previous build. By default these caches are stored in parcel-cache folder in our project. This should be added to git ignore so that it is not committed in our repository.
+    2. **Caching**: Parcel needs space for running, and it creates caches. Parcel caches everythind it builds to the disk. If we restart the server, Parcel will only rebuild the ones that have changes from the previous build. By default these caches are stored in parcel-cache folder in our project. This should be added to git ignore so that it is not committed in our repository.
 
-      **Hot Module Replacement**: It will keep track of all the files we are updating with the help of file watcher algorithm. It is a very fast watcher written in C++ which integrated with the low level functionality of each OS. Using this watcher Parcel watches all the files in our root folder and node modules. Based on the these events from the files, Parcel will determine which files needs rebuilding.
+    3. **Hot Module Replacement**: It will keep track of all the files we are updating with the help of file watcher algorithm. It is a very fast watcher written in C++ which integrated with the low level functionality of each OS. Using this watcher Parcel watches all the files in our root folder and node modules. Based on the these events from the files, Parcel will determine which files needs rebuilding.
 
 
 ## What is `.gitignore`? What should we add and not add into it?
@@ -107,3 +107,14 @@ NPM doesn't stand for Node Package Manager but we use it to manage our packages.
 -  ` text/ecmascript`
 -   `application/ecmascript`
 -   `application/javascript`
+
+##References
+
+[Creating Your Own React App](https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658 "Creating Your Own React App")
+
+[Parcel Documentation](//https://parceljs.org/getting-started/webapp/ "Parce Documentation")
+
+[Parcel on Production](//https://parceljs.org/features/production/ "Parcel on Production")
+
+[Browser List](https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z "Browser List")
+
