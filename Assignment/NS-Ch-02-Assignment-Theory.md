@@ -1,4 +1,4 @@
-**NR-CH-01-THEORY-ASSIGNMENT**
+**NR-CH-02-THEORY-ASSIGNMENT**
 
 ##  What is `NPM`?
 NPM doesn't stand for Node Package Manager but we use it to manage our packages. It's our largest software registry with lots of packages where we can share and borrow packages from all over the world. We can manage private development. It consists of three components

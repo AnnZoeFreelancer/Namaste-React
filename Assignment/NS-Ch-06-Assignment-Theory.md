@@ -34,17 +34,23 @@ If we create a function and we give a name, it is a function statement.
 `Ex: function a(){
 	console.log("a called");
 }`
+
 **Function Expression**
 If we can assign a function to a variable, this way is called as function expression.
+
 `Ex: var b = function(){
 	console.log("b called");
 }`
 b();
+
 **The difference between them is the hoisting. **
+
 During hoisting phase(memory creation phase), 
 If we call a and b before creating them 
+
 `a(); o/p a called`
 `b(); o/p Uncaught type Error:b is not defined`
+
 Here a is created a memory and function is assigned to a. 
 b is treated like any other variable so it is assigned undefined initially untill the code hits the line var b - fun.
 b();
@@ -75,8 +81,9 @@ What is CORS?
 1.  Simple Request
 2.  Preflight Request
 
-Simple Request:  In simple request, there are no restrictions.
-Preflight request: 
+**Simple Request**:  In simple request, there are no restrictions.
+
+**Preflight request**: 
    If one app A is requesting something from another app B.
 1. CORS preflight options call is made.
 2.    B takes responsibility of verifying whether the call is valid or not. 
@@ -86,7 +93,8 @@ Preflight request:
    Most commonly used http headers are:
    **Access-Control-Allow-Origin:** When we have a general public api, server will set the header as a * which makes any domain outside of the domain to access it without any restrictions. Access-Control-Allow-Origin:*
    If we want a specific domain, then they will set the header as `Access-Cntrol-Allow-Origin:www.xyz.com`
-  ** Access-Control-Allow-Method:** There can be different methods with restricted mode. Methods like get, post, delete etc. 
+
+    **Access-Control-Allow-Method:** There can be different methods with restricted mode. Methods like get, post, delete etc. 
 
 
 ## What is async and await?
