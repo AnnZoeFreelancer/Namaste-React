@@ -1,4 +1,4 @@
-Alt-H1 Theory Assignment:
+**NR-CH-02-THEORY-ASSIGNMENT**
 
 ##  What is `NPM`?
 NPM doesn't stand for Node Package Manager but we use it to manage our packages. It's our largest software registry with lots of packages where we can share and borrow packages from all over the world. We can manage private development. It consists of three components
@@ -35,41 +35,40 @@ NPM doesn't stand for Node Package Manager but we use it to manage our packages.
   HMR or Hot module replacement automatically updates modules in the browser at runtime without refreshing the page. It supports both HTML and CSS. The way HMR works is there is a file watcher algorithm  written in C++. The algorithm keeps track of all the files that are changing in realtime  and it tells the server to reload. All these are done by Parcel.
 
 ## List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
-    ### Superpowers of Parcel are: 
-      * Hot Module Replacement(File Watcher Algorithm)
-      * Zero Config, 
-      * Bundling, 
-      * Minifying, 
-      * Cleaning our code, 
-      * Caching
-      * Image Optimization, 
-      * Compression
-      * Superfast build algorithm, 
-      * Consistent Hashing algorithm
-      * Dev and production build, 
-      * HTTPS on dev, 
-      * Manages port number, 
-      * Creates a server
+  **  Superpowers of Parcel are as follow:**
+-       Hot Module Replacement(File Watcher Algorithm),
+-       Zero Config, 
+-       Bundling, 
+-       Minifying, 
+-       Cleaning our code, 
+-       Caching
+-       Image Optimization, 
+-       Compression
+-       Superfast build algorithm, 
+-       Consistent Hashing algorithm
+-       Dev and production build, 
+-       HTTPS on dev, 
+-       Manages port number,
+-       Creates a server
 
-     **Dev Server** : Parcel has a built in server which gets automatically started when we run parcel command.
-      "parcel server". It starts server by default at port number 1234. 
+     **Dev Server** : Parcel has a built in server which gets automatically 	started when we run parcel command. "parcel server". It starts server by default at port number 1234.
 
-      **Caching**: Parcel needs space for running, and it creates caches. Parcel caches everythind it builds to the disk. If we restart the server, Parcel will only rebuild the ones that have changes from the previous build. By default these caches are stored in parcel-cache folder in our project.This should be added to git ignore
-      so that it is not committed in our repository.
+      **Caching**: Parcel needs space for running, and it creates caches. Parcel caches everythind it builds to the disk. If we restart the server, Parcel will only rebuild the ones that have changes from the previous build. By default these caches are stored in parcel-cache folder in our project. This should be added to git ignore so that it is not committed in our repository.
 
       **Hot Module Replacement**: It will keep track of all the files we are updating with the help of file watcher algorithm. It is a very fast watcher written in C++ which integrated with the low level functionality of each OS. Using this watcher Parcel watches all the files in our root folder and node modules. Based on the these events from the files, Parcel will determine which files needs rebuilding.
 
 
 ## What is `.gitignore`? What should we add and not add into it?
-    * Gitignore is a folder meant for git repository. Files pushed into gitignore are meant to ignore the files inside it intentionally  so that our repository will skip these files while commiting our project.  
-    * Anything we generate on server is put inside git ignore. Parcel-cache should be pushed into git ignore.We should not add files that needs to be commited in our project inside git ignore.
+ -    Gitignore is a folder meant for git repository. Files pushed into gitignore are meant to ignore the files inside it intentionally  so that our repository will skip these files while commiting our project.
+ 
+-    Anything we generate on server is put inside git ignore. Parcel-cache should be pushed into git ignore.We should not add files that needs to be commited in our project inside git ignore.
 
 ## What is the difference between `package.json` and `package-lock.json`?
-  * package.json contains basic information of the project whearas package-lock.json describes the exact tree generated. The tree allows us to have a identical tree on subsequent installs.
-  * package.json is mandatory for every project. package-lock.json is generated automatically for operations where npm modifies either the node modules tree or package.json.
-  * package.json contains information like name,version,license description, author, keywords, script and dependencies. package-lock.json contains name, dependency and locked version of project.
-  * package.json gets created using npm init or manually writing necessary details inside the file.package-lock.json gets created automatically when we install npm.
-  * package.json stores the minimum version required by our program. If we upgrade the versions of a certain package, the change will not be shown here. package-lock.json keeps track of the exact version of each installed package by allowing us to reinstall it. When we reinstall it, it will generate the same dependancy tree. 
+  * `package.json` contains basic information of the project whearas `package-lock.json` describes the exact tree generated. The tree allows us to have a identical tree on subsequent installs.
+  * `package.json` is mandatory for every project. `package-lock.json` is generated automatically for operations where npm modifies either the node modules tree or package.json.
+  *` package.json` contains information like name,version,license description, author, keywords, script and dependencies. `package-lock.json` contains name, dependency and locked version of project.
+  * `package.json` gets created using npm init or manually writing necessary details inside the file. `package-lock.json` gets created automatically when we install npm.
+  * `package.json` stores the minimum version required by our program. If we upgrade the versions of a certain package, the change will not be shown here. `package-lock.json` keeps track of the exact version of each installed package by allowing us to reinstall it. When we reinstall it, it will generate the same dependancy tree. 
 
 ## Why should I not modify `package-lock.json`?
  We should not modofy package-lock.json because it could break the synchronization between package.json and package.lock.
@@ -78,28 +77,33 @@ NPM doesn't stand for Node Package Manager but we use it to manage our packages.
  Node module is like database for npm. Whenever we install something, it gets installed in node modules.  Its a very bad idea to push node_modules on git. package-lock can regenerate node modules for us. package lock is maintaing each and every detail availbe in node module. We can generate node modules on server with the help of package-lock.json file.
 
 ## What is the `dist` folder?
-  dist folder keeps the file minified for us. dist is development build. "npx parcel index.html" will create faster development version of our project and serves it on server. It creates development build for us and host it on server. To make production build "npx parcel build index.html" It will push all the build into dist folder. Build creates 3 files. Parcel bundles everything, minifies it and stores 3 files inside dist folder. The three files are "index.jhtml", "index.js","index.css". When it minifies, parcel removes console.log code. 
+  dist folder keeps the file minified for us. dist is development build. 
+  `npx parcel index.html` will create faster development version of our project and serves it on server. It creates development build for us and host it on server. 
+  To make production build `npx parcel build index.html`  will push all the build into dist folder. Build creates 3 files. Parcel bundles everything, minifies it and stores 3 files inside dist folder. The three files are `index.jhtml`, `index.js`,`index.css`. When it minifies, parcel removes console.log code. 
 
 ## What is `browserlists`?
   Browserlists is installed by parcel to us. It makes oure code compatible for specified older browsers. We can specify what kind of browser, what kind of versions needs to be supported in package.json file. 
-## Read about dif bundlers: vite, webpack, parcel
-  Parcel is a zero configuration web application bundler that is fast and easy to use.
-  Webpack is a module bundler that bundles JavaScript files for usage in a browser.
-  Vite is a web-based IDE that is designed to be a fast and lightweight alternative to traditional IDEs. It is a cloud-based IDE that runs on any device and is accessible from any browser.
+## Read about dif bundlers: `vite`, `webpack`, `parcel`
+- Parcel is a zero configuration web application bundler that is fast and easy to use.
 
-  Consider Parcel if you want a fast and easy to use bundler for your web application.
-  Consider webpack if you want a bundler that can bundle your JavaScript files for usage 
+-   Webpack is a module bundler that bundles JavaScript files for usage in a browser.
+-   Vite is a web-based IDE that is designed to be a fast and lightweight alternative to traditional IDEs. It is a cloud-based IDE that runs on any device and is accessible from any browser.
+
+  Consider **Parcel** if you want a fast and easy to use bundler for your web application.
+  Consider **Webpack** if you want a bundler that can bundle your JavaScript files for usage 
   in a browser.
-  Consider Vite if you want a lightweight IDE that is accessible from any browser.
+  Consider **Vite **if you want a lightweight IDE that is accessible from any browser.
 
-## Read about: ^ - caret and ~ - tilda
-  ^ Caret is used for updating minor/patch versions without incrementing major version. It is compatible with version. Ex. ^2.3.4 will use release from 2.3.4 to <3.0.0
-  ~Tilde is approximately equivalent to version. It will update all future patch versions without incrementing minor version. Ex. ~1.2.3 wil use release from 1.2.3 to <1.3.0
+## Read about:` ^ - caret` and` ~ - tilda`
+  **^ Caret** is used for updating minor/patch versions without incrementing major version. It is compatible with version. 
+  `Ex. ^2.3.4 will use release from 2.3.4 to <3.0.0`
+  **~Tilde** is approximately equivalent to version. It will update all future patch versions without incrementing minor version. 
+  `Ex. ~1.2.3 wil use release from 1.2.3 to <1.3.0`
 
 ## Read about Script types in html (MDN Docs)
   It contains a single value i.e media_type which specifies the MIME type of script.
   Common “media_type” values are: 
-  text/javascript (this is default)
-  text/ecmascript
-  application/ecmascript
-  application/javascript
+- ` text/javascript (this is default)`
+-  ` text/ecmascript`
+-   `application/ecmascript`
+-   `application/javascript`
