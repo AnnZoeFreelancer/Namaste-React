@@ -46,7 +46,7 @@ for(){
 useState is a  hook that react gives you to create local state variable in your functional component.
 Never use useSTate outside a funcitonal component.
 
-We can create several useEffect
+We can create several useEffect 
 
 
 How to keep images locally?
