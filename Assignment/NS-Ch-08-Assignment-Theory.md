@@ -41,11 +41,11 @@ We want our header and footer to be always there. Things inbetween .Content in t
 Whatever we have in children will go into the outlet according to the route.
 
 # Read abt createHashRouter, createMemoryRouter from React Router docs. 
-###createHashRouter
+## createHashRouter
 This router is useful if you are unable to configure your web server to direct all traffic to your React Router application. Instead of using normal URLs, it will use the hash (#) portion of the URL to manage the "application URL".
 `Using hash URLs is not recommended.`
 
-###createMemoryRouter
+## createMemoryRouter
 Instead of using the browser's history, a memory router manages its own history stack in memory. It's primarily useful for testing and component development tools like Storybook, but can also be used for running React Router in any non-browser environment. 
 
 # What is the order of life cycle method calls in Class Based Components?
