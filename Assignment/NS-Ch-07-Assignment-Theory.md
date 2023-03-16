@@ -1,3 +1,4 @@
+##NR-CH-07-THEORY-ASSIGNMENT
 # What are the various ways to add images into our app? Explain with code example.
 
 * We can add images via cdn links. 
