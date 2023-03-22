@@ -11,7 +11,7 @@ import Error from "./components/Error";
 import Profile from "./components/Profile";
 import RestaurantMenu from "./components/RestaurantMenu";
 
-
+import Skm  from "./components/skm";
 
 const AppLayout=()=>{
     return(
@@ -61,3 +61,4 @@ const appRouter = createBrowserRouter(
 
 const root = createRoot(document.getElementById("root"));
 root.render(<RouterProvider router = {appRouter}/>);
+// root.render(<Skm/>);

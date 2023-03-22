@@ -24,16 +24,16 @@ class About extends Component{
     componentDidMount(){
         //API Call
         console.log("parent- componentDidMount");
-        this.timer= setInterval(()=>{
-            console.log("set Interval after every second");
-        },1000);
-        console.log(this.timer);
+        // this.timer= setInterval(()=>{
+        //     console.log("set Interval after every second");
+        // },1000);
+        // console.log(this.timer);
     }
     componentDidUpdate(){
         console.log("parent-componentDidUpdate");
     }
     componentWillUnmount(){
-        clearInterval(this.timer);
+        // clearInterval(this.timer);
         console.log("parent- componentWillUnmout");
     }
     render(){

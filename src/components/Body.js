@@ -1,14 +1,10 @@
 import { restaurantList } from "../constants";
 import RestaurantCard from "./RestaurantCard";
+import { filterData } from "../utils/helper";
 import {useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
-function filterData(searchText,restaurants){
-    // return restaurants.filter((restaurant)=>restaurant.data.name.includes(searchText));
-    const filterData=restaurants.filter((restaurant)=>restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase()));
-     return filterData;
-}
 
 const Body=()=>{
     const [allRestaurants,setAllRestaurants] = useState([]);
