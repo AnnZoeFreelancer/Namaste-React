@@ -42,6 +42,7 @@
 .card>img{
     width:100%;
 }
+
 .restaurant-list{
     display:flex;
     flex-wrap:wrap;
@@ -114,19 +115,87 @@ a{
 a:hover{
     color:#3d4152;
 }
-.menu{
-    display:flex;
-    justify-content:space-evenly;
+.restaurant_details{
+    display:block;
     max-width: 1000px;
     margin:20px auto 0;
 }
-.menu h2{
+.restaurant_details h2{
     margin:10px 0;
 }
-.menu img{
+.restaurant_details img{
     width:259px;
     height:160px;
 }
-.menu div{
+.restaurant_details div{
     word-spacing: wrap;
+}
+.restaurant_info,.restaurant_menu{
+    max-width: 800px;
+    min-height: 300px;
+    margin: 20px auto 0;
+    font-size: .93rem;
+    color: #7e808c;
+}
+.restaurant_info > img{
+    float:right;
+}
+.restaurant_button{
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 1px 5px #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    max-width: 100px;
+    float: right;
+    margin-left:30px;
+}
+.restaurant_total_rating{
+    font-size: 11px;
+    color: #8b8d97;
+    font-family: ProximaNovaCondensedRegular,arial,Helvetica Neue,sans-serif;
+    font-weight: 600;
+}
+.restaurant_avgRating{
+    color: #3d9b6d;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9e9eb;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+.restaurant_delivery{
+    display:flex;
+    margin-top:20px;
+}
+.restaurant_fee_message{
+    flex-grow:1;
+   
+}
+.restaurant_delivery>img{
+    margin-right: 8px;
+    height: 18px;
+    width: 18px;
+}
+.restaurant_cuisines{
+    margin-bottom:4px;
+}
+.restaurant_timecost{
+    color: #3e4152;
+    font-size: 15px;
+    font-weight: 700;
+    margin:20px 0px;
+}
+.restaurant_timecost>span{
+    margin-right: 20px;
+
+}
+.restaurant_timecost_icon{
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+.restaurant_dashed_border{
+    border:none;
+    border-bottom: 1px dashed #d3d3d3;
+    margin-top:20px;
 }
