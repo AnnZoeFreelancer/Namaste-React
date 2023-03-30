@@ -6,6 +6,8 @@ export const FETCH_RESTAURANTS_URL =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.931948400167405&lng=80.1345556229353&page_type=DESKTOP_WEB_LISTING";
 export const IMG_FEE_CDN_URL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/v1648635511/Delivery_fee_new_cjxumu";
+export const MENU_ITEM_IMG_CDN_URL =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
 export const restaurantList = [
   {
     type: "restaurant",

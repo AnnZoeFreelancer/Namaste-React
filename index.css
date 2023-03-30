@@ -14,6 +14,7 @@
     padding: 0 20px;
     align-items: center;
     color:#3d4152;
+    z-index: 1000;
 }
 .nav-items>ul{
     list-style-type:none;
@@ -132,7 +133,7 @@ a:hover{
 }
 .restaurant_info,.restaurant_menu{
     max-width: 800px;
-    min-height: 300px;
+    min-height: 200px;
     margin: 20px auto 0;
     font-size: .93rem;
     color: #7e808c;
@@ -199,3 +200,62 @@ a:hover{
     border-bottom: 1px dashed #d3d3d3;
     margin-top:20px;
 }
+
+.nested_item_header{
+    margin-bottom:24px;
+}
+.nested_item_subheader_divider{
+    animation: styles_openMenuDivider__1IdIb .4s ease-in-out forwards;
+}
+
+.dish_Container{
+    display:flex;
+    justify-content: space-between;
+    min-width: 118px;
+    margin-left:16px;
+}
+.dish_Image_Container{
+    position:relative;
+}
+.dish_Header{
+    margin-bottom:24px;
+    color: #3e4152;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.dish_SubHeader{
+    margin-right: 4px;
+    font-size: 1.22rem;
+    font-weight: 500;
+    color: #3e4152;
+    word-break: break-word;
+    margin-top:4px;
+}
+.dish_Description{
+   margin-top:14px;
+}
+.dish_Image{
+    width: 118px;
+    height: 96px;
+    border-radius:6px;
+
+}
+.dishImage::after{
+    position:absolute;
+    top:0;
+    right:0;
+}
+.divider{
+    border-bottom: 0.5px solid #d3d3d3;
+    height: 0.5px;
+    margin: 20px 0;
+
+}
+
+
+/* Aviva Date  5 march 2009
+1 june 2018 
+
+september 6 2017
+
+*/

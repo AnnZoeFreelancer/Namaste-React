@@ -72,12 +72,9 @@ const Body = () => {
           className="search-btn"
           onClick={() => {
             //filter data
-            // debugger;
             const data = filterData(searchText, allRestaurants);
             //update the state - restaurants
-            console.log("DATA", data);
             setFilteredRestaurants(data);
-            console.log("buton", filteredRestaurants);
           }}
         >
           Search
@@ -86,16 +83,21 @@ const Body = () => {
 
       <div className="restaurant-list">
         {console.log("CARD-FILTERED REST", filteredRestaurants)}
-        {filteredRestaurants?.map((restaurant) => {
-          return (
-            <Link
-              to={"/restaurant/" + restaurant.data.id}
-              key={restaurant.data.id}
-            >
-              <RestaurantCard {...restaurant.data} />
-            </Link>
-          );
-        })}
+
+        {filteredRestaurants.length == 0 ? (
+          <h1>No restaurant available! </h1>
+        ) : (
+          filteredRestaurants?.map((restaurant) => {
+            return (
+              <Link
+                to={"/restaurant/" + restaurant.data.id}
+                key={restaurant.data.id}
+              >
+                <RestaurantCard {...restaurant.data} />
+              </Link>
+            );
+          })
+        )}
       </div>
     </>
   );

@@ -5,7 +5,6 @@ const RestaurantMenu = (restaurantMenu) => {
     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
   const nestedItemCategory =
     "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory";
-  debugger;
   console.log(restaurantMenu);
   return (
     <div>
