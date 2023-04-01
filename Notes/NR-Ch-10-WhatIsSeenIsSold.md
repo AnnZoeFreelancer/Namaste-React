@@ -109,7 +109,7 @@ npx is used to execute it directly.
 You can check in package.json file. Tailwind and postcss will be there
 
 We need to do some configuration
-npx tailwind init gave use tailwind-config.js file 
+npx tailwind init gave us tailwind-config.js file 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [ ],
@@ -146,9 +146,9 @@ Create postcss.rc file.
 }
 
 Why? Here we need to configure this to tell our bundler why we are bundling things up. 
-While building we will be using our tailwind so compile our tailwind. This is the reason we use postcss.rc configuration.
+While building we will be using our tailwind, so compile our tailwind. This is the reason we use postcss.rc configuration.
 
-Post css takes the config and tells our bundler(parcel), we will see lot of tailwind classes, we need to configure it that when we are bundling things up compile tailwind css into normal css. That is the job of post css.
+Post css takes the config and tells our bundler(parcel), we will see lot of tailwind classes, we need to configure it that when we are bundling things up, compile tailwind css into normal css. That is the job of post css.
 
 In index.css we will have only 3 lines when we use tailwind css.
 @tailwind base;
