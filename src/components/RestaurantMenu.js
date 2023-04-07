@@ -1,5 +1,6 @@
 import RestaurantNestedItemCAtegory from "./RestaurantNestedItemCategory";
 import RestaurantItemCategory from "./RestaurantItemCategory";
+
 const RestaurantMenu = (restaurantMenu) => {
   const itemCategory =
     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
@@ -8,7 +9,7 @@ const RestaurantMenu = (restaurantMenu) => {
   console.log(restaurantMenu);
   return (
     <div>
-      <div className="restaurant_menu">
+      <div className="text-sm text-gray-600 max-w-[800px] min-h-[200px] mt-2 mx-auto mb-0">
         {Object.values(restaurantMenu)?.map((groupedCards, index) => (
           <div key={index}>
             {groupedCards?.card?.card["@type"] === nestedItemCategory ||

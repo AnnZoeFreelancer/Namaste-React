@@ -4,23 +4,8 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import useAllRestaurant from "../utils/useAllRestaurant";
-import useFilteredRestaurants from "../utils/useFilteredRestaurants";
 
 const Body = () => {
-  // const fData = useAllRestaurant();
-  // console.log("fdata", fData);
-  // const allRestaurants = fData.allRestaurants; // useAllRestaurant();
-  // // const filteredRestaurants = fData.filteredRestaurants; // useAllRestaurant();
-  // const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  // console.log("fDAta.filteredREstaurants", fData.filteredRestaurants);
-  // let a = 5;
-  // const [searchText, setSearchText] = useState("");
-
-  // useEffect(() => {
-  //   setFilteredRestaurants(fData.allRestaurants);
-  // }, [a]);
-  a = 7;
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -59,17 +44,17 @@ const Body = () => {
     <>
       {console.log("belowshimmer-filteredRestaurants,", filteredRestaurants)}
 
-      <div className="search-container">
+      <div className="inline-block text-center my-0 mx-auto w-full">
         <input
           type="text"
-          className="search-input"
+          className="mt-5 rounded-md h-12 w-10/12 border ring-offset-1 ring-offset-slate-50"
           placeholder="search"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
 
         <button
-          className="search-btn"
+          className="h-12 rounded-md w-1/12 ml-2 border ring-offset-1 ring-offset-gray-50 "
           onClick={() => {
             //filter data
             const data = filterData(searchText, allRestaurants);
@@ -81,7 +66,7 @@ const Body = () => {
         </button>
       </div>
 
-      <div className="restaurant-list">
+      <div className="flex flex-wrap justify-between pt-10 my-10 mx-20 rounded-md border border-solid ring-offset-1 ring-offset-purple-50">
         {console.log("CARD-FILTERED REST", filteredRestaurants)}
 
         {filteredRestaurants.length == 0 ? (

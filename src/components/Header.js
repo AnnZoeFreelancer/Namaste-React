@@ -8,44 +8,46 @@ const loggedInUser = () => {
 };
 
 const Title = () => {
-  return <img alt="logo" className="logo" src={logo} />;
+  return <img alt="logo" className="h-full" src={logo} />;
 };
 const Header = () => {
   const [title, setTitle] = useState("Foodies Pit Stop");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isOnline = useOnline();
   return (
-    <div className="header-container">
-      <div className="header">
+    <div className="pt-20">
+      <div className="flex justify-between fixed  z-50 top-0 left-0 right-0 h-20 items-center text-gray-800 shadow-xl bg-white">
         <Title />
-        <h1>{title}</h1>
+        <h1 className="font-extrabold">{title}</h1>
         {/* <button onClick={()=>setTitle("New Food App")}>Change Title</button>   */}
         <div className="nav-items">
-          <ul>
-            <li>
+          <ul className="list-none flex items-center">
+            <li className="mr-16 text-gray-800 text-base font-medium items-center pl-6">
               <Link to="/">HOME</Link>
             </li>
-            <li>
+            <li className="mr-16 text-gray-800 text-base font-medium items-center pl-6">
               <Link to="/about">ABOUT</Link>
             </li>
-            <li>
+            <li className="mr-16 text-gray-800 text-base font-medium items-center pl-6">
               <Link to="/contact">CONTACT</Link>
             </li>
-            <li>
+            <li className="mr-16 text-gray-800 text-base font-medium items-center pl-6">
               <Link to="/instamart">INSTAMART</Link>
             </li>
-            <li>CART</li>
+            <li className="mr-16 text-gray-800 text-base font-medium items-center pl-6">
+              CART
+            </li>
           </ul>
         </div>
 
         {/* {(loggedInUser()?<button>Logout</button>:<button>Login</button>)} */}
         {isLoggedIn ? (
-          <button className="login-btn" onClick={() => setIsLoggedIn(false)}>
-            LOGOUT{{ isOnline } ? "🟢" : "🔴"}
+          <button onClick={() => setIsLoggedIn(false)}>
+            {{ isOnline } ? "🟢" : "🔴"}LOGOUT
           </button>
         ) : (
-          <button className="logout-btn" onClick={() => setIsLoggedIn(true)}>
-            LOGIN{{ isOnline } ? "🟢" : "🔴"}
+          <button onClick={() => setIsLoggedIn(true)}>
+            {{ isOnline } ? "🟢" : "🔴"}LOGIN
           </button>
         )}
       </div>

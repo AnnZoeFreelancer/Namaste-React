@@ -12,7 +12,7 @@ const RestaurantDetails = () => {
   return !restaurant ? (
     <Shimmer />
   ) : (
-    <div className="menu">
+    <div>
       <RestaurantInfo {...restaurant?.info} />
       <RestaurantMenu {...restaurant?.groupedCards} />
     </div>

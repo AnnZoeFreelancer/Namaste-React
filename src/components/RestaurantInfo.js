@@ -2,31 +2,35 @@ import { IMG_FEE_CDN_URL } from "../constants";
 const RestaurantInfo = (restaurant) => {
   console.log("info", restaurant);
   return (
-    <div className="restaurant_info">
-      <div className="restaurant_button">
-        <div className="restaurant_avgRating">{restaurant.avgRating}</div>
+    <div className="text-sm text-gray-600 max-w-[800px] min-h-[200px] mt-2 mx-auto mb-0">
+      <div className="rounded-md text-center p-2 float-right ml-8 border ring-offset-1 border-solid ring-offset-purple-50">
+        <div className="text-green-600 pb-2 font-bold mb-2 block border-b border-solid ring-offset-purple-50">
+          {restaurant.avgRating}
+        </div>
 
-        <div className="restaurant_total_rating">
+        <div className="text-gray-600 font-semibold text-sm font-sans">
           {restaurant.totalRatingsString}
         </div>
       </div>
       {/* <img src={IMG_CDN_URL + restaurant.cloudinaryImageId}></img> */}
-      <h2>{restaurant.name}</h2>
-      <div className="restaurant_cuisines">{restaurant?.cuisines}</div>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+        {restaurant.name}
+      </h2>
+      <div className="text-sm text-gray-600 overflow-hidden mb-1 whitespace-no-wrap">
+        {restaurant?.cuisines}
+      </div>
       <div>
         {restaurant.areaName},{restaurant?.sla?.lastMileTravelString}
       </div>
-      <div className="restaurant_delivery">
-        <img src={IMG_FEE_CDN_URL} />
-        <span className="restaurant_fee_message">
-          {restaurant?.feeDetails?.message}
-        </span>
+      <div className="flex mt-5">
+        <img className="float-right mr-2 h-4 w-4" src={IMG_FEE_CDN_URL} />
+        <span className="flex-grow">{restaurant?.feeDetails?.message}</span>
       </div>
-      <hr className="restaurant_dashed_border"></hr>
+      <hr className="mt-5 border border-dashed ring-offset-1 ring-offset-slate-50"></hr>
 
-      <div className="restaurant_timecost">
+      <div className="flex text-gray-800 text-sm font-bold my-5 mx-0">
         <svg
-          className="restaurant_timecost_icon"
+          className="align-bottom mr-2"
           width="18"
           height="18"
           viewBox="0 0 18 18"
@@ -44,9 +48,9 @@ const RestaurantInfo = (restaurant) => {
             fill="#3E4152"
           ></path>
         </svg>
-        <span>{restaurant?.sla?.slaString}</span>
+        <span className="mr-5">{restaurant?.sla?.slaString}</span>
         <svg
-          className="restaurant_timecost_icon"
+          className="align-bottom mr-2"
           width="18"
           height="18"
           viewBox="0 0 18 18"

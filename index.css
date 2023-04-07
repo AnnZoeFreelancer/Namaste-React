@@ -1,4 +1,9 @@
-.header-container{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*HEADER*/
+/* .header-container{
     padding-top:80px;
 }
 .header{
@@ -33,6 +38,13 @@
 .logo{
     height:100%;
 }
+
+.login-btn, .logout-btn{
+    border:none;
+    background-color:#fff;
+}
+
+
 .card{
     width:259px;
     height:160px;
@@ -44,6 +56,24 @@
     width:100%;
 }
 
+
+.restaurant-card-name{
+    margin-top:14px;
+    font-size:17px;
+    font-weight:bold;
+}
+.restaurant-card-cuisines{
+    margin-top:4px;
+    overflow-wrap: anywhere;???????????????????
+    font-size:13px;
+}
+.restaurant-card-last-mile-travel-string{
+    font-size:15px;
+    font-weight: 400;
+    display:inline-block;
+    text-align: center;
+}
+
 .restaurant-list{
     display:flex;
     flex-wrap:wrap;
@@ -52,7 +82,7 @@
     border-top: 1px solid #e9e9eb;
     margin:10px 20px;
 }
-*, :after, :before {
+*, :after, :before {????????????????
     margin: 0;
     padding: 0;
     box-sizing:inherit;
@@ -69,33 +99,17 @@
     border-radius: 5px;
     width: 118px;
     margin-left: 10px;
-    border:1px solid rgb(219, 219, 219);
+    border:1px solid rgb(219, 219, 219);????????????????????
 }
 .search-input{
     width: 800px;
     margin-top: 20px;
-    border: 1px solid rgba(40,44,63,.3);
+    border: 1px solid rgba(40,44,63,.3);???????????????
     border-radius: 3px;
     height:50px;
     padding:0 20px;
 }
 
-.restaurant-card-name{
-    margin-top:14px;
-    font-size:17px;
-    font-weight:bold;
-}
-.restaurant-card-cuisines{
-    margin-top:4px;
-    overflow-wrap: anywhere;
-    font-size:13px;
-}
-.restaurant-card-last-mile-travel-string{
-    font-size:15px;
-    font-weight: 400;
-    display:inline-block;
-    text-align: center;
-}
 .shimmer-container{
     margin-top:190px;
 }
@@ -105,35 +119,32 @@
     background-color: lightgray;
     margin:20px;
 }
-.login-btn, .logout-btn{
-    border:none;
-    background-color:#fff;
-}
-a{
-    text-decoration: none;
-    color:gray;
-}
-a:hover{
-    color:#3d4152;
-}
-.restaurant_details{
-    display:block;
-    max-width: 1000px;
-    margin:20px auto 0;
-}
-.restaurant_details h2{
-    margin:10px 0;
-}
-.restaurant_details img{
-    width:259px;
-    height:160px;
-}
-.restaurant_details div{
-    word-spacing: wrap;
-}
+
+            a{
+                text-decoration: none;
+                color:gray;
+            }
+            a:hover{
+                color:#3d4152;
+            }
+            .restaurant_details{
+                display:block;
+                max-width: 1000px;
+                margin:20px auto 0;
+            }
+            .restaurant_details h2{
+                margin:10px 0;
+            }
+            .restaurant_details img{
+                width:259px;
+                height:160px;
+            }
+            .restaurant_details div{
+                word-spacing: wrap;
+            }
 .restaurant_info,.restaurant_menu{
-    max-width: 800px;
-    min-height: 200px;
+    max-width: 800px;???????????????
+    min-height: 200px;????????????????
     margin: 20px auto 0;
     font-size: .93rem;
     color: #7e808c;
@@ -197,7 +208,7 @@ a:hover{
 }
 .restaurant_dashed_border{
     border:none;
-    border-bottom: 1px dashed #d3d3d3;
+    border-bottom: 1px dashed #d3d3d3;?????????????
     margin-top:20px;
 }
 
@@ -205,7 +216,7 @@ a:hover{
     margin-bottom:24px;
 }
 .nested_item_subheader_divider{
-    animation: styles_openMenuDivider__1IdIb .4s ease-in-out forwards;
+    animation: styles_openMenuDivider__1IdIb .4s ease-in-out forwards;????????????
 }
 
 .dish_Container{
@@ -247,15 +258,10 @@ a:hover{
 }
 .divider{
     border-bottom: 0.5px solid #d3d3d3;
-    height: 0.5px;
+    height: 0.5px;??????????????????
     margin: 20px 0;
 
 }
 
 
-/* Aviva Date  5 march 2009
-1 june 2018 
-
-september 6 2017
-
-*/
+ */
