@@ -1,18 +1,19 @@
-import { useState } from "react";
 import RestaurantDish from "./RestaurantDish";
-const RestaurantItemCategory = (itemCategory) => {
-  const [show, setShow] = useState(false);
+import { useState } from "react";
+const RestaurantNestedItemSubCategory = (groupedSubCategory) => {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
-    <div>
+    <>
       <div className="flex justify-between">
-        <h1 className="mb-6 text-gray-800 font-extrabold text-xl">
-          {itemCategory?.title}({itemCategory?.itemCards.length})
-        </h1>
-        {show ? (
+        <h2 className="text-gray-800 text-lg font-normal">
+          {groupedSubCategory?.title}({groupedSubCategory?.itemCards?.length})
+        </h2>
+        {isVisible ? (
           <>
             <button
               onClick={() => {
-                setShow(false);
+                setIsVisible(false);
               }}
             >
               <svg
@@ -34,7 +35,7 @@ const RestaurantItemCategory = (itemCategory) => {
         ) : (
           <button
             onClick={() => {
-              setShow(true);
+              setIsVisible(true);
             }}
           >
             <svg
@@ -54,21 +55,21 @@ const RestaurantItemCategory = (itemCategory) => {
           </button>
         )}
       </div>
-      {show && (
-        <div id={itemCategory?.customid}>
-          <ul>
-            {itemCategory?.itemCards?.map((dish, index) => {
-              return (
-                <div key={index}>
-                  <RestaurantDish {...dish?.card?.info} />
-                </div>
-              );
-            })}
-          </ul>
-        </div>
+
+      <div className="border border-solid ring-offset-1 ring-offset-gray-100 h-px my-5 mx-0"></div>
+      {isVisible && (
+        <ol>
+          {groupedSubCategory?.itemCards?.map((dish, index) => (
+            <div key={index}>
+              <RestaurantDish {...dish?.card?.info} />
+              {/* <p>{dish?.card?.info?.description}</p> */}
+            </div>
+          ))}
+        </ol>
       )}
       <div className="border-8 border-solid ring-offset-8 ring-offset-gray-100 h-px my-5 mx-0"></div>
-    </div>
+    </>
   );
 };
-export default RestaurantItemCategory;
+
+export default RestaurantNestedItemSubCategory;
