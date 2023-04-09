@@ -4,7 +4,7 @@ const RestaurantInfo = (restaurant) => {
   return (
     <div className="text-sm text-gray-600 max-w-[800px] min-h-[200px] mt-2 mx-auto mb-0">
       <div className="rounded-md text-center p-2 float-right ml-8 border ring-offset-1 border-solid ring-offset-purple-50">
-        <div className="text-green-600  flex  justify-evenly pb-2 font-bold mb-2 border-b border-solid ring-offset-purple-50">
+        <div className="text-green-600  flex  justify-center pb-2 font-bold mb-2 border-b border-solid ring-offset-purple-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

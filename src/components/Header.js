@@ -16,7 +16,7 @@ const Header = () => {
   const isOnline = useOnline();
   return (
     <div className="pt-20">
-      <div className="flex justify-between fixed  z-50 top-0 left-0 right-0 h-20 items-center text-gray-800 shadow-xl bg-white">
+      <div className="flex justify-between fixed px-20 z-50 top-0 left-0 right-0 h-20 items-center text-gray-800 shadow-xl bg-white">
         <Title />
         <h1 className="font-extrabold">{title}</h1>
         {/* <button onClick={()=>setTitle("New Food App")}>Change Title</button>   */}
@@ -41,6 +41,7 @@ const Header = () => {
         </div>
 
         {/* {(loggedInUser()?<button>Logout</button>:<button>Login</button>)} */}
+
         {isLoggedIn ? (
           <button onClick={() => setIsLoggedIn(false)}>
             {{ isOnline } ? "🟢" : "🔴"}LOGOUT

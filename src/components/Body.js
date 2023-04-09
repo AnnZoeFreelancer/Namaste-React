@@ -44,17 +44,17 @@ const Body = () => {
     <>
       {console.log("belowshimmer-filteredRestaurants,", filteredRestaurants)}
 
-      <div className="inline-block text-center my-0 mx-auto w-full">
+      <div className="flex justify-center mt-5  text-center my-0 mx-auto w-2/3">
         <input
           type="text"
-          className="mt-5 rounded-md h-12 w-10/12 border ring-offset-1 ring-offset-slate-50"
-          placeholder="search"
+          className="rounded-md h-12 w-10/12  pl-4 border ring-offset-1 ring-offset-slate-50"
+          placeholder="Search for restaurants and food"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
 
         <button
-          className="h-12 rounded-md w-1/12 ml-2 border ring-offset-1 ring-offset-gray-50 "
+          className="h-12 rounded-md w-1/12 ml-2 "
           onClick={() => {
             //filter data
             const data = filterData(searchText, allRestaurants);
@@ -62,11 +62,24 @@ const Body = () => {
             setFilteredRestaurants(data);
           }}
         >
-          Search
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-between pt-10 my-10 mx-20 rounded-md border border-solid ring-offset-1 ring-offset-purple-50">
+      <div className="flex flex-wrap justify-between pt-10 my-10 mx-20">
         {console.log("CARD-FILTERED REST", filteredRestaurants)}
 
         {filteredRestaurants.length == 0 ? (
