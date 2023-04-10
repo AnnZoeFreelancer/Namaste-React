@@ -196,7 +196,7 @@ With this small thing,we can make the app alot performant.
 You can see the shimmer. 
 You can see Ranked, in order of time it took more to load. 
 
-If we have user ingo 
+If we have user info 
 const AppLayout = ()=>{
     const [user,setUser]= useSate({
         name: "Ann",
