@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const { user, setUser } = useContext(UserContext);
   useEffect(() => {
     setFilteredRestaurants(allRestaurants);
     console.log("body-filteredRestaurants,", filteredRestaurants);
@@ -77,6 +80,12 @@ const Body = () => {
             />
           </svg>
         </button>
+        <input
+          value={user.name}
+          onChange={(e) =>
+            setUser({ name: e.target.value, email: "newemail@gmail.com" })
+          }
+        />
       </div>
 
       <div className="flex flex-wrap justify-between pt-10 my-10 mx-20">

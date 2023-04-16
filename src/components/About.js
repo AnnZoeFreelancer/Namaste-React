@@ -1,3 +1,4 @@
+import UserContext from "../utils/UserContext";
 import ProfileFunctional from "./Profile";
 import ProfileClass from "./ProfileClass";
 import { Component } from "react";
@@ -39,6 +40,14 @@ class About extends Component {
     return (
       <div>
         <h1>About Us Page</h1>
+        <UserContext.Consumer>
+          {/* {(value) => console.log("UserContextConsumer", value)} */}
+          {({ user }) => (
+            <span className="font-bold ">
+              {user.name} - {user.email}
+            </span>
+          )}
+        </UserContext.Consumer>
         {/* {<Outlet/>} */}
         <ProfileFunctional name={" Zoe"} />
         <ProfileClass name={" First Child"} xyz={"abc"} />

@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+import UserContext from "./utils/UserContext";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { lazy, Suspense } from "react";
@@ -15,11 +17,19 @@ import Shimmer from "./components/Shimmer";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 const AppLayout = () => {
+  const [user, setUser] = useState({
+    name: "Namaste",
+    email: "namaste@gmail.com",
+  });
+
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      {/* UserContext provider is to override the default value */}
+      <UserContext.Provider value={{ user: user, setUser: setUser }}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </>
   );
 };
