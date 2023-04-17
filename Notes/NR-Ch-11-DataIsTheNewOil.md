@@ -285,6 +285,7 @@ Whenever useEffect get modified. all places will get modified.
 We want to use our context data everywhere so we wrap it over header, outlet and footer. So that it is available everywhere.
 
 What if we removed header from userContext provider?  We get dummy name. 
+We can modify context for smaller portion of our app. Provider value is overriding. 
 We can pass in different data in different portion of our app. Logically we should not do it. So wrap it will all inside. 
 
 Import in body and 
