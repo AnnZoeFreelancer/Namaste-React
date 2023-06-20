@@ -4,6 +4,7 @@ import logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 const loggedInUser = () => {
   //API call to check authentication
 };
@@ -16,6 +17,8 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const isOnline = useOnline();
   const { user } = useContext(UserContext);
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
   return (
     <div className="pt-20">
       <div className="flex justify-between fixed px-20 z-50 top-0 left-0 right-0 h-20 items-center text-gray-800 shadow-xl bg-white">
@@ -37,7 +40,7 @@ const Header = () => {
               <Link to="/instamart">INSTAMART</Link>
             </li>
             <li className="mr-16 text-gray-800 text-base font-medium items-center pl-6">
-              CART
+              <Link to="/cart"> CART - {cartItems.length} </Link>
             </li>
           </ul>
         </div>

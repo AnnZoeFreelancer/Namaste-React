@@ -13,6 +13,9 @@ import Error from "./components/Error";
 import Profile from "./components/Profile";
 import RestaurantDetails from "./components/RestaurantDetails";
 import Shimmer from "./components/Shimmer";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+import Cart from "./components/Cart";
 // import Instamart from "./components/InstaMart";
 
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -24,12 +27,14 @@ const AppLayout = () => {
 
   return (
     <>
-      {/* UserContext provider is to override the default value */}
-      <UserContext.Provider value={{ user: user, setUser: setUser }}>
-        <Header />
-        <Outlet />
-        <Footer />
-      </UserContext.Provider>
+      <Provider store={store}>
+        {/* UserContext provider is to override the default value */}
+        <UserContext.Provider value={{ user: user, setUser: setUser }}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </UserContext.Provider>
+      </Provider>
     </>
   );
 };
@@ -69,6 +74,10 @@ const appRouter = createBrowserRouter([
             <Instamart />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

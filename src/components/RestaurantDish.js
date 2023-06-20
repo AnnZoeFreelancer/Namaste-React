@@ -1,5 +1,11 @@
+import { useDispatch } from "react-redux";
 import { MENU_ITEM_IMG_CDN_URL } from "../constants";
+import { addItem } from "../utils/cartSlice";
 const RestaurantDish = (dish) => {
+  const dispatch = useDispatch();
+  const addFoodItem = (dish) => {
+    dispatch(addItem(dish));
+  };
   return (
     <>
       <div className="flex justify-between  mx-auto pb-4">
@@ -12,10 +18,15 @@ const RestaurantDish = (dish) => {
         </div>
         <div className="relative">
           {dish.imageId ? (
-            <img
-              className="w-[118px] h-[96px] z-20 rounded-md "
-              src={MENU_ITEM_IMG_CDN_URL + dish.imageId}
-            />
+            <div>
+              <img
+                className="w-[118px] h-[96px] z-20 rounded-md "
+                src={MENU_ITEM_IMG_CDN_URL + dish.imageId}
+              />
+              <button className="bg-green-50" onClick={() => addFoodItem(dish)}>
+                Add
+              </button>
+            </div>
           ) : (
             <div>No Image Available</div>
           )}
