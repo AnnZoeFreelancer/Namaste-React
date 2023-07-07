@@ -3,7 +3,7 @@ import FoodItem from "./FoodItem";
 import { clearCart } from "../utils/cartSlice";
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  console.log("cartPage:" + cartItems);
+  // console.log("cartPage:" + cartItems);
   const dispatch = useDispatch();
   const handleClearCart = () => {
     dispatch(clearCart());

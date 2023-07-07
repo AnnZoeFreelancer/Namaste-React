@@ -10,7 +10,10 @@ const RestaurantDish = (dish) => {
     <>
       <div className="flex justify-between  mx-auto pb-4">
         <div className="min-w-[118px]">
-          <h3 className="mr-1 text-xl font-medium text-gray-800 mt-1 break-words">
+          <h3
+            data-testid="menu"
+            className="mr-1 text-xl font-medium text-gray-800 mt-1 break-words"
+          >
             {dish.name}
           </h3>
           <h2>₹{dish.price ? dish.price / 100 : dish.defaultPrice / 100}</h2>
@@ -23,13 +26,17 @@ const RestaurantDish = (dish) => {
                 className="w-[118px] h-[96px] z-20 rounded-md "
                 src={MENU_ITEM_IMG_CDN_URL + dish.imageId}
               />
-              <button className="bg-green-50" onClick={() => addFoodItem(dish)}>
-                Add
-              </button>
             </div>
           ) : (
             <div>No Image Available</div>
           )}
+          <button
+            data-testid="addBtn"
+            className="bg-green-50"
+            onClick={() => addFoodItem(dish)}
+          >
+            Add
+          </button>
         </div>
       </div>
       <hr className="h-px my-4 border-b-slate-50 border-solid ring-offset-1"></hr>

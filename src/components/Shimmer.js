@@ -1,7 +1,10 @@
 const Shimmer = () => {
   return (
     <div className="mt-48">
-      <div className="flex flex-wrap justify-between pt-10 my-10 mx-20 rounded-md border border-solid ring-offset-1 ring-offset-purple-50">
+      <div
+        data-testid="shimmer"
+        className="flex flex-wrap justify-between pt-10 my-10 mx-20 rounded-md border border-solid ring-offset-1 ring-offset-purple-50"
+      >
         {Array(10)
           .fill("")
           .map((e, i) => (

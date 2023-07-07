@@ -23,7 +23,7 @@ const useAllRestaurant = () => {
       console.log(error);
     }
   }
-  console.log("HookallRestaurant", allRestaurants);
+  // console.log("HookallRestaurant", allRestaurants);
   return fData;
 };
 export default useAllRestaurant;

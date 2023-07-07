@@ -8,7 +8,7 @@ const RestaurantDetails = () => {
   const { resId } = useParams();
   const restaurant = useRestaurant(resId);
 
-  console.log(restaurant);
+  // console.log(restaurant);
   return !restaurant ? (
     <Shimmer />
   ) : (

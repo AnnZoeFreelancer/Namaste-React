@@ -14,7 +14,7 @@ const Body = () => {
   const { user, setUser } = useContext(UserContext);
   useEffect(() => {
     setFilteredRestaurants(allRestaurants);
-    console.log("body-filteredRestaurants,", filteredRestaurants);
+    // console.log("body-filteredRestaurants,", filteredRestaurants);
   }, []);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.931948400167405&lng=80.1345556229353&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
@@ -45,10 +45,11 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      {console.log("belowshimmer-filteredRestaurants,", filteredRestaurants)}
+      {/* {console.log("belowshimmer-filteredRestaurants,", filteredRestaurants)} */}
 
       <div className="flex justify-center mt-5  text-center my-0 mx-auto w-2/3">
         <input
+          data-testid="search-input"
           type="text"
           className="rounded-md h-12 w-10/12  pl-4 border ring-offset-1 ring-offset-slate-50"
           placeholder="Search for restaurants and food"
@@ -57,6 +58,7 @@ const Body = () => {
         />
 
         <button
+          data-testid="search-btn"
           className="h-12 rounded-md w-1/12 ml-2 "
           onClick={() => {
             //filter data
@@ -69,13 +71,13 @@ const Body = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            className="w-6 h-6"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
             />
           </svg>
@@ -88,8 +90,11 @@ const Body = () => {
         />
       </div>
 
-      <div className="flex flex-wrap justify-between pt-10 my-10 mx-20">
-        {console.log("CARD-FILTERED REST", filteredRestaurants)}
+      <div
+        data-testid="res-list"
+        className="flex flex-wrap justify-between pt-10 my-10 mx-20"
+      >
+        {/* {console.log("CARD-FILTERED REST", filteredRestaurants)} */}
 
         {filteredRestaurants.length == 0 ? (
           <h1>No restaurant available! </h1>
