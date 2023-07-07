@@ -1,6 +1,0 @@
-//Below code inside this fill removes console logs inside dist folder when executed.
-
-// with options
-// {
-//     "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
-//   }
