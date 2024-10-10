@@ -187,7 +187,7 @@ But Using JSX
 `const heading = <h1 id="title" key="h1">Namaste React</h1>;`
 
 ##### Is JSX HTML inside JS?
-NO its wrong. `<h1>` tag is not html. It is html like syntax. 
+NO its wrong. `<h1>` tag is not html. It is html like syntax. It is xml like syntax. But jsx is not html inside js or xml inside JS.  
 It is a fancy way of writing html inside JS but it is not html inside JS.
 
 ##### Difference between html and jsx?
@@ -199,6 +199,12 @@ JSX uses react.createElement behind the scenes.
 react.createElement is converted to object and it is then converted and rendered as html on dom.
 Babel understands JSX and convert it into react.createElement. 
 Babel does lot of optimization in the code. 
+
+`const jsxheading = <h1 id="heading">Namaste React</h1>;`
+It is a valid jsx. If we run the above code, it runs. Parcel is doing it for us. 
+JSX is transpiled before it reaches the JS engine. Parcel -Babel 
+JSX =>React.createElement =>React Element-JS OBject =>Html Element(render)
+JSX first converts to react.createElement. Then it converts to react element and then to JS Object and then converts to html element. 
 
 ##### Advantage of JSX
 - Readability,
@@ -216,7 +222,10 @@ One
 Two. one in node modules and another in project.
 
 ##### What is react elements?
-h1 tag in react is called as react elements.
+h1 tag in react is called as react elements. React element is just an object.When we render this onto the dom, it becomes a html element.
+
+##### What is root.render?
+It is powerful library in react dom that takes the object and converts to an html and push it in the browser. It will replace everthing that is inside the root whatever we are rendering from. It will replace but not append.
 
 ##### JSX expression
 ```
